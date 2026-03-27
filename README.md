@@ -1,8 +1,8 @@
-# Memes as Epistemic Infrastructure
-### *Viral Culture, Knowledge Transmission, and the Philosophy of Digital Phenomena*
+# Memes and the Philosophy of Digital Phenomena
+### *Viral Culture as Epistemic Infrastructure?*
 
 **Authors:** Miguel Moreno Muñoz (Universidad de Granada) · A. Claude et al. (Anthropic PBC)  
-**Date:** *c.* March 2026  
+**Date:** *circa* March 2026  
 **Format:** Quarto HTML monograph · Dual light/dark theme · APA 7 citations
 
 ---
@@ -82,19 +82,6 @@ Output: `meme-epistemology.html` in the project root.
 ```bash
 quarto preview meme-epistemology.qmd
 ```
-
-### Render to PDF (experimental)
-
-```bash
-quarto render meme-epistemology.qmd --to pdf
-```
-
-> PDF output requires a working LaTeX installation (e.g. TinyTeX: `quarto install tinytex`).
-> The dual-theme SCSS will not apply; PDF uses Quarto's default LaTeX template.
-> The dark theme, humor panel amber borders, and column-margin notes will be lost.
-> Consider this a known limitation rather than a bug.
-
----
 
 ## Deployment
 
