@@ -1,7 +1,7 @@
 # Memes and the Philosophy of Digital Phenomena
 ### *Viral Culture as Epistemic Infrastructure?*
 
-**Authors:** Miguel Moreno Muñoz (Universidad de Granada) · A. Claude et al. (Anthropic PBC)<sup>*</sup>
+**Authors:** Miguel Moreno Muñoz (Universidad de Granada) · A. Claude et al. (Anthropic PBC)<sup>*</sup>  
 **Date:** *circa* March 2026  
 **Format:** Quarto HTML monograph · Dual light/dark theme · APA 7 citations
 
@@ -251,5 +251,5 @@ Both are cited where analytically relevant, which is more often than one might e
 
 ---
 
-*The et al. in the second author attribution refers, with appropriate literalness,
+<sup>*</sup> *The et al. in the second author attribution refers, with appropriate literalness,
 to the training corpus.*
