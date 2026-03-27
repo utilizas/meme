@@ -1,0 +1,319 @@
+/*-- scss:defaults --*/
+$body-color:  #e8e4d9;
+$body-bg:     #0f0f1e;
+$link-color:  #93c5fd;
+
+/*-- scss:rules --*/
+/* =========================================================
+   DARK THEME — Memes as Epistemic Infrastructure
+   Base theme: darkly
+   Palette: deep navy BBS/terminal, warm off-white text
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---- CSS palette ---- */
+:root {
+  --me-accent:         #93c5fd;
+  --me-accent-rgb:     147,197,253;
+  --me-accent2:        #fca5a5;
+  --me-accent3:        #6ee7b7;
+  --me-bg:             #0f0f1e;
+  --me-bg-alt:         #161628;
+  --me-bg-code:        #1c1c34;
+  --me-border:         #2e2e50;
+  --me-text:           #e8e4d9;
+  --me-text-muted:     #9da3b4;
+  --me-drop-cap:       #93c5fd;
+  --me-humor-bg:       #1a1200;
+  --me-humor-border:   #f59e0b;
+  --me-humor-accent:   #fbbf24;
+  --me-humor-label-bg: #92400e;
+  --me-humor-text:     #fef3c7;
+  --era-90s-bg:  rgba(192,132,252,.15); --era-90s-fg: #c084fc;
+  --era-00s-bg:  rgba(248,113,113,.15); --era-00s-fg: #f87171;
+  --era-15s-bg:  rgba(147,197,253,.15); --era-15s-fg: #93c5fd;
+  --era-rec-bg:  rgba(110,231,183,.15); --era-rec-fg: #6ee7b7;
+
+  /* Force darkly Bootstrap vars to match our palette */
+  --bs-body-bg:        #0f0f1e;
+  --bs-body-color:     #e8e4d9;
+  --bs-border-color:   #2e2e50;
+  --bs-secondary-bg:   #161628;
+  --bs-tertiary-bg:    #1c1c34;
+  --bs-link-color:     #93c5fd;
+  --bs-link-hover-color: #fca5a5;
+}
+
+/* ---- Body typography ----
+   Cormorant at font-weight:500 on dark for density compensation */
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.18rem;
+  line-height: 1.85;
+  font-weight: 500;
+  color: var(--me-text);
+  background-color: var(--me-bg);
+  -webkit-font-smoothing: antialiased;
+}
+p, li, td, th { font-size: 1.18rem; font-weight: 500; }
+
+/* Drop cap */
+h2 + p:first-letter,
+h2 + div + p:first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8em; font-weight: 700; line-height: 0.78;
+  float: left; margin: 0.06em 0.1em 0 0; color: var(--me-drop-cap);
+}
+
+/* ---- Headings — Playfair Display ---- */
+h1, h2, h3, h4, h5, h6,
+.quarto-title-block .title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700; color: var(--me-text); line-height: 1.2;
+}
+h1, .quarto-title-block .title {
+  font-size: 2.2rem; font-weight: 700;
+  letter-spacing: -0.025em; color: var(--me-accent);
+}
+h2.anchored {
+  font-size: 1.75rem;
+  border-bottom: 1px solid var(--me-border);
+  padding-bottom: 0.35rem; margin-top: 3rem; color: var(--me-accent);
+}
+h3.anchored {
+  font-size: 1.3rem; font-style: italic; font-weight: 600;
+  color: var(--me-accent); margin-top: 2rem;
+}
+h4.anchored {
+  font-family: 'Inter', sans-serif; font-size: 0.84rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--me-text-muted);
+}
+.quarto-title-block .subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 1.28rem; color: var(--me-text-muted);
+}
+.quarto-title-block {
+  border-bottom: 3px double var(--me-accent);
+  padding-bottom: 1.75rem; margin-bottom: 2.75rem;
+}
+.quarto-title-meta {
+  font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--me-text-muted);
+}
+/* Fix: date value only — match author/affiliation scale */
+.quarto-title-meta-contents p.date {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---- Links ---- */
+a { color: var(--me-accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--me-accent2); }
+
+/* ---- Blockquotes ---- */
+blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.22rem; font-style: italic; font-weight: 500; line-height: 1.75;
+  border-left: 3px solid var(--me-accent); padding: 0.35rem 1.4rem;
+  margin: 1.6rem 0; color: var(--me-text-muted); background: transparent;
+}
+blockquote p:last-child {
+  font-style: normal; font-size: 0.92rem;
+  letter-spacing: 0.03em; color: var(--me-text-muted); margin-top: 0.5rem;
+}
+
+/* ---- Code ---- */
+code, pre, kbd, samp, .sourceCode, tt {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.84em;
+}
+pre, div.sourceCode {
+  background: var(--me-bg-code); border: 1px solid var(--me-border); border-radius: 4px;
+}
+code:not(pre code) {
+  background: var(--me-bg-code); border: 1px solid var(--me-border);
+  border-radius: 3px; padding: 0.1em 0.35em; color: var(--me-accent3);
+}
+
+/* ---- Meme-fact display ---- */
+.meme-fact {
+  display: block; font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem; font-weight: 500; color: var(--me-accent3);
+  background: var(--me-bg-code); border: 1px solid var(--me-border);
+  border-left: 4px solid var(--me-accent3);
+  padding: 0.7rem 1.1rem; margin: 1.1rem 0; border-radius: 0 4px 4px 0;
+}
+.meme-fact::before { content: "> "; opacity: .45; }
+
+/* ---- Humor panel (amber) ---- */
+.humor-panel {
+  font-family: 'Lora', Georgia, serif; font-size: 1.0rem; line-height: 1.75;
+  background: var(--me-humor-bg); border: 2px solid var(--me-humor-border);
+  border-radius: 6px; padding: 1.3rem 1.6rem 1.15rem;
+  margin: 2.2rem 0; color: var(--me-humor-text);
+}
+.humor-panel::before {
+  content: "🎭  EPISTEMIC IRONY — Registered Humorous Interlude";
+  display: block; font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--me-humor-accent); padding-bottom: 0.65rem;
+  border-bottom: 1px dashed var(--me-humor-border); margin-bottom: 0.85rem;
+}
+.humor-panel h4, .humor-panel h5 {
+  font-family: 'Playfair Display', serif; font-size: 1.08rem;
+  font-style: italic; font-weight: 600; color: var(--me-humor-accent); margin: 0 0 0.65rem;
+}
+.humor-panel p { font-size: 1.0rem; line-height: 1.75; margin-bottom: 0.55rem; }
+.humor-panel em { font-style: normal; font-weight: 600; color: var(--me-humor-accent); }
+.humor-panel .meme-fact {
+  color: var(--me-humor-accent); background: rgba(255,255,255,.03);
+  border-left-color: var(--me-humor-border);
+}
+.humor-note {
+  display: block; font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; color: var(--me-humor-accent);
+  opacity: .72; margin-top: 0.8rem; text-align: right;
+}
+.humor-inline-tag {
+  display: inline-block; font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem; background: var(--me-humor-label-bg);
+  color: #fff; padding: 0.1rem 0.45rem; border-radius: 3px;
+  letter-spacing: .08em; text-transform: uppercase;
+  vertical-align: middle; margin-left: .25rem;
+}
+
+/* ---- Callout ---- */
+.callout { background: var(--me-bg-alt); border-color: var(--me-border); }
+.callout .callout-title {
+  font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase;
+  background: rgba(147,197,253,.10) !important; color: var(--me-accent);
+}
+.callout-body p { font-size: 1.0rem; line-height: 1.72; }
+
+/* ---- Preface box ---- */
+.preface-box {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.06rem;
+  font-style: italic; font-weight: 500;
+  border: 1px solid var(--me-border); border-left: 4px solid var(--me-accent);
+  background: var(--me-bg-alt); padding: 1.2rem 1.5rem;
+  margin-bottom: 2.5rem; border-radius: 0 5px 5px 0;
+}
+.preface-box p:last-child { margin-bottom: 0; }
+
+/* ---- Appendix entry cards ---- */
+.meme-entry {
+  border: 1px solid var(--me-border); border-radius: 6px;
+  padding: 1.05rem 1.3rem; margin: 1rem 0; background: var(--me-bg-alt);
+  transition: border-color .2s, box-shadow .2s;
+}
+.meme-entry:hover {
+  border-color: var(--me-accent); box-shadow: 0 2px 14px rgba(147,197,253,.12);
+}
+.meme-entry-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; margin-bottom: .5rem; }
+.meme-entry-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.02rem; color: var(--me-text); }
+.meme-year {
+  font-family: 'JetBrains Mono', monospace; font-size: .70rem;
+  background: var(--me-bg-code); border: 1px solid var(--me-border);
+  color: var(--me-accent); padding: .1rem .4rem; border-radius: 3px;
+}
+.meme-entry p {
+  font-family: 'Cormorant Garamond', serif; font-size: 0.98rem;
+  line-height: 1.7; color: var(--me-text-muted); margin-bottom: .35rem; font-weight: 500;
+}
+.meme-links { margin-top: .55rem; font-family: 'Inter', sans-serif; font-size: .80rem; }
+.meme-links a { margin-right: .75rem; }
+
+/* ---- Era badges ---- */
+.era-badge {
+  display: inline-block; font-family: 'JetBrains Mono', monospace;
+  font-size: .63rem; font-weight: 600; letter-spacing: .07em;
+  padding: .1rem .5rem; border-radius: 10px; text-transform: uppercase;
+}
+.era-badge.era-90s    { background: var(--era-90s-bg); color: var(--era-90s-fg); border: 1px solid var(--era-90s-fg); }
+.era-badge.era-2000s  { background: var(--era-00s-bg); color: var(--era-00s-fg); border: 1px solid var(--era-00s-fg); }
+.era-badge.era-2015   { background: var(--era-15s-bg); color: var(--era-15s-fg); border: 1px solid var(--era-15s-fg); }
+.era-badge.era-recent { background: var(--era-rec-bg); color: var(--era-rec-fg); border: 1px solid var(--era-rec-fg); }
+
+.era-heading {
+  border-top: 2px solid var(--me-border); padding-top: .8rem; margin-top: 2.2rem;
+  font-family: 'Inter', sans-serif; font-size: .76rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .14em; color: var(--me-text-muted);
+}
+
+/* ---- TOC ---- */
+/* Cormorant Garamond at 0.82rem: same family as body, clearly smaller,
+   scales gracefully — Playfair Display is a display face that does not
+   reduce well below ~1rem and reads as disproportionately large in the
+   sidebar regardless of the font-size value set. */
+#TOC {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.82rem;
+  line-height: 1.58;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.01em;
+}
+#TOC a {
+  color: var(--me-text-muted);
+  text-decoration: none;
+  transition: color .15s;
+  font-style: normal;
+}
+#TOC a:hover { color: var(--me-accent); }
+#TOC .active > a {
+  color: var(--me-accent);
+  font-weight: 600;
+  font-style: italic;
+}
+#TOC li { margin-bottom: 0.2rem; }
+/* Section numbers: mono, subdued */
+#TOC .toc-section-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.70em;
+  opacity: 0.50;
+  margin-right: 0.28em;
+  font-style: normal;
+}
+
+/* ---- Bibliography ---- */
+#refs, .references { font-family: 'Cormorant Garamond', serif; font-size: .98rem; line-height: 1.7; font-weight: 500; }
+#refs .csl-entry, .references .csl-entry { margin-bottom: .9rem; padding-left: 2em; text-indent: -2em; }
+
+/* ---- Footnotes ---- */
+.footnotes {
+  font-family: 'Cormorant Garamond', serif; font-size: .94rem; font-weight: 500;
+  border-top: 1px solid var(--me-border);
+  margin-top: 2.5rem; padding-top: .8rem; color: var(--me-text-muted);
+}
+
+hr { border: none; border-top: 1px solid var(--me-border); margin: 2.5rem 0; }
+
+/* ---- Navbar ---- */
+.navbar {
+  background-color: #0a0a18 !important;
+  border-bottom: 1px solid var(--me-border);
+  font-family: 'Inter', sans-serif; font-size: .84rem; font-weight: 500;
+}
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-style: italic; color: var(--me-accent) !important;
+}
+.navbar .nav-link { color: var(--me-text-muted) !important; }
+.navbar .nav-link:hover { color: var(--me-accent) !important; }
+
+@media (max-width: 768px) {
+  body, p, li { font-size: 1.08rem; }
+  h1 { font-size: 1.9rem; }
+  h2.anchored { font-size: 1.45rem; }
+  .humor-panel { padding: 1rem 1.1rem; }
+  h2 + p:first-letter, h2 + div + p:first-letter { all: unset; }
+}
+
+@media print {
+  body { font-size: 10.5pt; line-height: 1.6; color: #000; background: #fff; }
+  .humor-panel { border: 2px solid #d97706; background: #fffbeb; }
+  #TOC, .navbar { display: none; }
+}
