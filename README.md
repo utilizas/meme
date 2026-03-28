@@ -103,7 +103,8 @@ Archived at [Zenodo](https://doi.org/10.5281/zenodo.19277505) with DOI `10.5281/
 
 ## Licence
 
-Text and original analysis: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
+© 2026 Miguel Moreno.   
+Text and original analysis: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
 Cited works remain the property of their respective authors and publishers.  
 Meme templates and viral artefacts discussed are the property of their respective
 creators; their inclusion constitutes fair dealing for the purposes of criticism,
