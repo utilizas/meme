@@ -111,13 +111,10 @@ commentary, and academic research.
 
 ## Acknowledgements
 
-Source materials include two documents circulated as inspiration for this project:
-a journalistic retrospective on the Chuck Norris phenomenon published by @bastarrica2026
-in *Digital Trends*, and an anonymous satirical *Tratado sobre el "Big Bang" de la
-Memética Moderna* — a parody academic paper that, beneath its pantomime rigour,
-encodes several genuine insights into the structural mechanics of viral diffusion.
+Source materials include three documents circulated as inspiration for this project:  
+The first is a journalistic retrospective on the Chuck Norris meme phenomenon published by Bastarrica (2026) in Digital Trends upon the actor’s death in March 2026. The second is Didyme-Dôme (2026), a Rolling Stone obituary that recontextualises Norris’s cultural afterlife by situating the meme economy within a broader narrative of celebrity durability and late‑career mythopoesis. The third is an anonymous satirical Tratado sobre el “Big Bang” de la Memética Moderna — a parody academic paper that, beneath its pantomime rigour, encodes several genuine insights into the structural mechanics of viral diffusion. 
 
-Both are cited where analytically relevant, which is more often than one might expect.
+All three are cited where analytically relevant, which is more often than one might expect.
 
 ---
 
