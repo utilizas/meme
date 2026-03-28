@@ -17,8 +17,8 @@ as the primary case study.
 
 The monograph operates in two explicit registers: rigorous academic argument and
 productive epistemic irony. Sections marked with amber **Epistemic Irony** panels
-perform critical analysis through humour rather than despite it. This is not a stylistic
-choice; it is a theoretical commitment documented in the text itself.
+perform critical analysis through humour rather than despite it — a methodological 
+choice whose rationale is developed in the text.
 
 ---
 
