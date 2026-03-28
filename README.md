@@ -27,11 +27,13 @@ choice whose rationale is developed in the text.
 ```
 .
 ├── meme-epistemology.qmd      # Main document (source)
-├── references.bib             # Bibliography (57+ entries, APA 7)
+├── references.bib             # Bibliography (APA 7)
 ├── apa.csl                    # Citation style (APA 7th edition)
 ├── styles-light.scss          # Light theme (base: cosmo)
 ├── styles-dark.scss           # Dark theme (base: darkly)
 ├── _meta-tags.html            # HTML head: OG, Twitter Card, Dublin Core, JSON-LD
+├── og-image.png               # Social preview image (1200×630)
+├── ogimage.png                # In-document cover image
 └── README.md                  # This file
 ```
 
