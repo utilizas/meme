@@ -15,7 +15,7 @@ not as ephemeral cultural debris but as constitutive infrastructure for collecti
 knowledge formation in networked societies — with the Chuck Norris Facts (2005–present)
 as the primary case study.
 
-The monograph operates in two explicit registers: rigorous academic argument and
+This work operates in two explicit registers: rigorous academic argument and
 productive epistemic irony. Sections marked with amber **Epistemic Irony** panels
 perform critical analysis through humour rather than despite it — a methodological 
 choice whose rationale is developed in the text.
