@@ -66,168 +66,38 @@ in both SCSS files accordingly.
 ---
 
 ## Rendering
-
-### Local render
-
 ```bash
-# Clone or download the project, then:
-cd meme-epistemology
 quarto render meme-epistemology.qmd
 ```
 
-Output: `meme-epistemology.html` in the project root.
-
-### Preview with live reload
-
-```bash
-quarto preview meme-epistemology.qmd
-```
+Output: `index.html` in the project root.
 
 ## Deployment
 
-The rendered output is a single self-contained HTML file. Any static hosting service
-will serve it correctly. The options below are listed in approximate order of
-configuration simplicity.
+The monograph is deployed at:
 
-### Cloudflare Pages
-
-1. Push repository to GitHub or GitLab.
-2. In Cloudflare Pages dashboard: **Create a project → Connect to Git**.
-3. Build settings:
-   - **Build command:** `quarto render meme-epistemology.qmd`
-   - **Build output directory:** `/` (root)
-   - **Environment variable:** `QUARTO_VERSION=1.4.555` (or later)
-4. Cloudflare Pages will install Quarto automatically via the build environment.
-5. Custom domain: configure in **Custom domains** tab.
-
-> Cloudflare Pages provides free SSL, global CDN, and permanent deployment URLs
-> at `https://[project].pages.dev`. Recommended for academic deployment.
-
-### Netlify
-
-1. Push repository to GitHub.
-2. In Netlify dashboard: **Add new site → Import an existing project**.
-3. Build settings:
-   - **Base directory:** (leave blank)
-   - **Build command:** `quarto render meme-epistemology.qmd`
-   - **Publish directory:** `.` (root)
-4. Add a `netlify.toml` in the project root for reproducibility:
-
-```toml
-[build]
-  command = "quarto render meme-epistemology.qmd"
-  publish = "."
-
-[build.environment]
-  QUARTO_VERSION = "1.4.555"
-```
-
-5. Custom domain: configure in **Domain management**.
-
-### Vercel
-
-1. Push repository to GitHub.
-2. In Vercel dashboard: **Add New Project → Import Git Repository**.
-3. Framework preset: **Other**.
-4. Build settings:
-   - **Build command:** `quarto render meme-epistemology.qmd`
-   - **Output directory:** `.`
-   - **Install command:** `curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb && dpkg -i quarto-linux-amd64.deb`
-5. Add a `vercel.json` in the project root:
-
-```json
-{
-  "buildCommand": "quarto render meme-epistemology.qmd",
-  "outputDirectory": ".",
-  "installCommand": "curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb && dpkg -i quarto-linux-amd64.deb"
-}
-```
-
-> Vercel's free tier has a 45-second build time limit. The monograph renders in
-> approximately 20–35 seconds on a standard build runner.
-
-### GitHub Pages (simplest option)
-
-1. Render locally: `quarto render meme-epistemology.qmd`
-2. Push the rendered `meme-epistemology.html` (and rename to `index.html`) to the
-   `gh-pages` branch, or configure GitHub Pages to serve from the `main` branch root.
-3. Enable GitHub Pages in repository **Settings → Pages**.
-4. Alternatively, use the official Quarto GitHub Actions workflow:
-
-```yaml
-# .github/workflows/publish.yml
-on:
-  push:
-    branches: [main]
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: quarto-dev/quarto-actions/setup@v2
-      - uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-```
-
-### Zenodo (permanent archival DOI)
-
-For a citable, permanently archived version with a DOI:
-
-1. Render locally and verify the output.
-2. Create a `.zenodo.json` in the project root:
-
-```json
-{
-  "title": "Memes as Epistemic Infrastructure: Viral Culture, Knowledge Transmission, and the Philosophy of Digital Phenomena",
-  "creators": [
-    {
-      "name": "Moreno Muñoz, Miguel",
-      "affiliation": "Universidad de Granada",
-      "orcid": "0000-0002-0746-9587"
-    },
-    {
-      "name": "Claude, A. et al.",
-      "affiliation": "Anthropic PBC"
-    }
-  ],
-  "description": "A scholarly monograph examining internet memes as constitutive infrastructure for collective knowledge formation in networked societies.",
-  "access_right": "open",
-  "license": "cc-by-4.0",
-  "keywords": ["memetics", "epistemology", "digital culture", "philosophy of technology", "STS", "Chuck Norris Facts"],
-  "language": "eng",
-  "upload_type": "publication",
-  "publication_type": "other"
-}
-```
-
-3. Upload the rendered HTML and source files to [zenodo.org](https://zenodo.org).
-4. The DOI will be minted on publication and is citable in APA 7 as:
-
-```
-Moreno Muñoz, M., & Claude, A. et al. (2026). Memes as epistemic infrastructure:
-Viral culture, knowledge transmission, and the philosophy of digital phenomena.
-Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
-```
+- [GitHub Pages](https://utilizas.github.io/meme/) (canonical)
+- [Vercel](https://meme-mocha-six.vercel.app/)
+- [Netlify](https://memeti.netlify.app/)
 
 ---
 
 ## Citation
 
+Archived at [Zenodo](https://doi.org/10.5281/zenodo.19277505) with DOI `10.5281/zenodo.19277505`.
 ```bibtex
 @misc{moreno2026memes,
-  author    = {Moreno Mu{\~n}oz, Miguel and {Claude, A. et al.}},
-  title     = {Memes as Epistemic Infrastructure: Viral Culture,
-               Knowledge Transmission, and the Philosophy of
-               Digital Phenomena},
+  author    = {Moreno Mu{\~n}oz, Miguel},
+  title     = {Memes and the Philosophy of Digital Phenomena:
+               Viral Culture as Epistemic Infrastructure?},
   year      = {2026},
-  note      = {HTML monograph. \textit{c.} March 2026},
-  url       = {[DEPLOYMENT_URL]}
+  month     = mar,
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.19277505},
+  url       = {https://doi.org/10.5281/zenodo.19277505},
+  note      = {HTML monograph, CC BY-NC-SA 4.0}
 }
 ```
-
----
 
 ## Licence
 
